@@ -20,4 +20,4 @@ for col_name in ['account_balance', 'transaction_amount', 'risk_score']:
     df = df.filter(col(col_name) >= 0)
 
 
-df.coalesce(1).write.mode("overwrite").option("header", True).csv("hgs://online-payments-fraud/destination/cleaned_data")
+df.coalesce(1).write.mode("overwrite").option("header", True).csv("gs://online-payments-fraud/destination/cleaned_data")
